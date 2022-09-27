@@ -8,5 +8,7 @@ public interface MayBayService {
     public List<MayBay> findMayBayTamBayLonHon10000();
     public int countMayBayByLoaiBoeing();
     public List<String> findMaMBDriveByNhanVienFirstNameNguyen();
+    public List<String> getLoaiByMaCBVN280();
+
 
 }

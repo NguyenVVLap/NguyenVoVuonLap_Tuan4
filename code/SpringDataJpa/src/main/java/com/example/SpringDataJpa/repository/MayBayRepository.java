@@ -19,4 +19,7 @@ public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
             "WHERE nhanvien.ten like 'Nguyen%' " +
             "GROUP by maybay.mamb;", nativeQuery = true)
     public List<String> findMaMBDriveByNhanVienFirstNameNguyen();
+
+    @Query(value = "select Loai from maybay where TamBay < (select DoDai from chuyenbay where MaCB = 'VN280')",nativeQuery = true)
+    public List<String> getLoaiByMaCBVN280();
 }

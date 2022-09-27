@@ -27,4 +27,9 @@ public class MayBayServiceImpl implements  MayBayService{
     public List<String> findMaMBDriveByNhanVienFirstNameNguyen() {
         return mayBayRepository.findMaMBDriveByNhanVienFirstNameNguyen();
     }
+
+    @Override
+    public List<String> getLoaiByMaCBVN280() {
+        return mayBayRepository.getLoaiByMaCBVN280();
+    }
 }

@@ -134,4 +134,14 @@ class SpringDataJpaApplicationTests {
 			System.out.println(ma);
 		}
 	}
+
+	//13. Cho biết các loại máy bay có thể thực hiện chuyến bay VN280.
+	@Test
+	void testCau13() {
+		List<String> listLoaiMB = mayBayService.getLoaiByMaCBVN280();
+		System.out.println("- Các loại máy bay có thể thực hiện chuyến bay VN280: ");
+		for (String loai: listLoaiMB) {
+			System.out.println(loai);
+		}
+	}
 }
