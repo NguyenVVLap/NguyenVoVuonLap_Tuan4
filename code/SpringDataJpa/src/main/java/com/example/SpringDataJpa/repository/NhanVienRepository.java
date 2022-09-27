@@ -61,6 +61,12 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
 
     @Query(value = "select MaNV from nhanvien where luong = (select luong from nhanvien order by luong desc limit 1)", nativeQuery = true)
     public List<String> getMaNVLuongMax();
+
+    @Query(value = "select sum(luong) from nhanvien " +
+            "where manv in (select nhanvien.manv from nhanvien inner join " +
+            "chungnhan on nhanvien.MaNV=chungnhan.MaNV " +
+            "group by nhanvien.maNV)",nativeQuery = true)
+    public int sumLuongPhiCong();
 }
 
 

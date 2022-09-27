@@ -35,4 +35,7 @@ public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
 
     @Query(value = "select GaDi,COUNT(GaDi) from chuyenbay where GioDi <'12:00:00' group by GaDi",nativeQuery = true)
     public List<Object[]> countCBByGadiBefore12h();
+
+    @Query(value = "select * from chuyenbay where chuyenbay.DoDai < ( select max(maybay.TamBay) from maybay where maybay.Loai like '%Boeing%' )",nativeQuery = true)
+    public List<ChuyenBay> getCBByLoaiMBBoeing();
 }

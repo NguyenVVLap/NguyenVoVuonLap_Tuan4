@@ -67,4 +67,9 @@ public class NhanVienServiceImpl implements  NhanVienService{
     public List<String> getMaNVLuongMax() {
         return nhanVienRepository.getMaNVLuongMax();
     }
+
+    @Override
+    public int sumLuongPhiCong() {
+        return nhanVienRepository.sumLuongPhiCong();
+    }
 }

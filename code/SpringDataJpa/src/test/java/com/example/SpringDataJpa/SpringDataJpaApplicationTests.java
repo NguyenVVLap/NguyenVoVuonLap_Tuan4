@@ -269,4 +269,21 @@ class SpringDataJpaApplicationTests {
 			System.out.println(maNV);
 		}
 	}
+
+	//27. Cho biết tổng số lương phải trả cho các phi công.
+	@Test
+	void testCau27() {
+		int luong = nhanVienService.sumLuongPhiCong();
+		System.out.println("- Tổng số lương phải trả cho các phi công: " + luong);
+	}
+
+	//28. Tìm các chuyến bay có thể được thực hiện bởi tất cả các loại máy bay Boeing.
+	@Test
+	void testCau28() {
+		List<ChuyenBay> listCB = chuyenBayService.getCBByLoaiMBBoeing();
+		System.out.println("- Các chuyến bay có thể được thực hiện bởi tất cả các loại máy bay Boeing: ");
+		for (ChuyenBay cb: listCB) {
+			System.out.println(cb);
+		}
+	}
 }
