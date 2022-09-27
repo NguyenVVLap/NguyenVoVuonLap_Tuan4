@@ -46,4 +46,9 @@ public class ChuyenBayServiceImpl implements ChuyenBayService{
     public List<ChuyenBay> getChuyenBayForAToBToA() {
         return chuyenBayRepository.getChuyenBayForAToBToA();
     }
+
+    @Override
+    public List<Object[]> countChuyenBayByGaDi() {
+        return chuyenBayRepository.countChuyenBayByGaDi();
+    }
 }

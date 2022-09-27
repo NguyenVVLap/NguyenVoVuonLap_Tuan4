@@ -183,4 +183,13 @@ class SpringDataJpaApplicationTests {
 			System.out.println(cb);
 		}
 	}
+
+	//18. Với mỗi ga có chuyến bay xuất phát từ đó cho biết có bao nhiêu chuyến bay khởi hành từ ga đó.
+	@Test
+	void testCau18() {
+		List<Object[]> objs = chuyenBayService.countChuyenBayByGaDi();
+		for (Object[] obj: objs) {
+			System.out.println("- Ga đi: " + obj[0] + ", Số chuyến bay: " + obj[1]);
+		}
+	}
 }

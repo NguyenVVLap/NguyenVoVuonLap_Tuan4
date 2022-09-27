@@ -23,4 +23,7 @@ public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
 
     @Query(value = "select * from chuyenbay where GaDen in  (select GaDi from chuyenbay ) and ( GaDi in  (select GaDen from chuyenbay ))",nativeQuery = true)
     public List<ChuyenBay> getChuyenBayForAToBToA();
+
+    @Query(value = "select GaDi, count(GaDi) from chuyenbay group by GaDi", nativeQuery = true)
+    public List<Object[]> countChuyenBayByGaDi();
 }

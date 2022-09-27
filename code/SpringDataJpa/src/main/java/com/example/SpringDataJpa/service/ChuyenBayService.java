@@ -14,5 +14,6 @@ public interface ChuyenBayService {
     public List<ChuyenBay> getChuyenBayByLoaiMayBayAirbusA320();
 
     public List<ChuyenBay> getChuyenBayForAToBToA();
+    public List<Object[]> countChuyenBayByGaDi();
 
 }
