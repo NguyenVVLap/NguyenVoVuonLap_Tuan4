@@ -56,4 +56,9 @@ public class ChuyenBayServiceImpl implements ChuyenBayService{
     public List<Object[]> sumChiPhiByGadi() {
         return chuyenBayRepository.sumChiPhiByGadi();
     }
+
+    @Override
+    public List<ChuyenBay> getCBBefore12h() {
+        return chuyenBayRepository.getCBBefore12h();
+    }
 }

@@ -29,4 +29,7 @@ public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
 
     @Query(value = "SELECT chuyenbay.GaDi, SUM(chuyenbay.ChiPhi) as total FROM chuyenbay GROUP BY (chuyenbay.GaDi)",nativeQuery = true)
     public List<Object[]> sumChiPhiByGadi();
+
+    @Query(value = "select * from chuyenbay where GioDi <'12:00:00'",nativeQuery = true)
+    public List<ChuyenBay> getCBBefore12h();
 }

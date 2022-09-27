@@ -201,4 +201,14 @@ class SpringDataJpaApplicationTests {
 			System.out.println("- Ga đi: " + obj[0] + ", Tổng chi phí: " + obj[1]);
 		}
 	}
+
+	//20. Cho biết danh sách các chuyến bay có thể khởi hành trước 12:00.
+	@Test
+	void testCau20() {
+		List<ChuyenBay> listCB = chuyenBayService.getCBBefore12h();
+		System.out.println("- Các chuyến bay có thể khởi hành trước 12:00: ");
+		for (ChuyenBay cb: listCB) {
+			System.out.println(cb);
+		}
+	}
 }
