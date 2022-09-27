@@ -20,4 +20,7 @@ public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
 
     @Query(value = "select * from chuyenbay where DoDai < (select TamBay from maybay where Loai = 'Airbus A320')",nativeQuery = true)
     public List<ChuyenBay> getChuyenBayByLoaiMayBayAirbusA320();
+
+    @Query(value = "select * from chuyenbay where GaDen in  (select GaDi from chuyenbay ) and ( GaDi in  (select GaDen from chuyenbay ))",nativeQuery = true)
+    public List<ChuyenBay> getChuyenBayForAToBToA();
 }

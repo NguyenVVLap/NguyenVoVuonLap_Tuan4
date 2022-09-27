@@ -41,4 +41,9 @@ public class ChuyenBayServiceImpl implements ChuyenBayService{
     public List<ChuyenBay> getChuyenBayByLoaiMayBayAirbusA320() {
         return chuyenBayRepository.getChuyenBayByLoaiMayBayAirbusA320();
     }
+
+    @Override
+    public List<ChuyenBay> getChuyenBayForAToBToA() {
+        return chuyenBayRepository.getChuyenBayForAToBToA();
+    }
 }

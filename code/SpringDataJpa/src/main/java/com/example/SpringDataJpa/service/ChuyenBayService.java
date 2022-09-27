@@ -13,5 +13,6 @@ public interface ChuyenBayService {
     public int countChuyenBayFromSaiGon();
     public List<ChuyenBay> getChuyenBayByLoaiMayBayAirbusA320();
 
+    public List<ChuyenBay> getChuyenBayForAToBToA();
 
 }

@@ -173,4 +173,14 @@ class SpringDataJpaApplicationTests {
 			System.out.println("- Mã số: " + obj[0] + ", Loại: " + obj[1] + ", Tổng số phi công có thể lái: " + obj[2]);
 		}
 	}
+
+	//17. Giả sử một hành khách muốn đi thẳng từ ga A đến ga B rồi quay trở về ga A. Cho biết các đường bay nào có thể đáp ứng yêu cầu này.
+	@Test
+	void testCau17() {
+		List<ChuyenBay> listCB = chuyenBayService.getChuyenBayForAToBToA();
+		System.out.println("- Các đường bay cho khách đi thẳng từ ga A đến ga B rồi quay trở về ga A: ");
+		for (ChuyenBay cb: listCB) {
+			System.out.println(cb);
+		}
+	}
 }
