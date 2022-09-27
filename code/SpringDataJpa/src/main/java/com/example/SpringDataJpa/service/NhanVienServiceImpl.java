@@ -62,4 +62,9 @@ public class NhanVienServiceImpl implements  NhanVienService{
     public List<Object[]> getNVNotPhiCong() {
         return nhanVienRepository.getNVNotPhiCong();
     }
+
+    @Override
+    public List<String> getMaNVLuongMax() {
+        return nhanVienRepository.getMaNVLuongMax();
+    }
 }

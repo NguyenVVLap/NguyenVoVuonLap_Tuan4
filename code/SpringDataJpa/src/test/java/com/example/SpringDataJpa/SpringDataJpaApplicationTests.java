@@ -259,4 +259,14 @@ class SpringDataJpaApplicationTests {
 			System.out.println("Mã NV: " + obj[0] + ", Tên NV: " + obj[1] + ", Lương: " + obj[2]);
 		}
 	}
+
+	//26. Cho biết mã số của các nhân viên có lương cao nhất.
+	@Test
+	void testCau26() {
+		List<String> listMaNV = nhanVienService.getMaNVLuongMax();
+		System.out.println("- Mã số của các nhân viên có lương cao nhất: ");
+		for (String maNV: listMaNV) {
+			System.out.println(maNV);
+		}
+	}
 }

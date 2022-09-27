@@ -58,4 +58,9 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
             "chungnhan on nhanvien.MaNV=chungnhan.MaNV " +
             "where chungnhan.MaNV is null",nativeQuery = true)
     public List<Object[]> getNVNotPhiCong();
+
+    @Query(value = "select MaNV from nhanvien where luong = (select luong from nhanvien order by luong desc limit 1)", nativeQuery = true)
+    public List<String> getMaNVLuongMax();
 }
+
+
