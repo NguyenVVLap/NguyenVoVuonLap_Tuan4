@@ -164,4 +164,13 @@ class SpringDataJpaApplicationTests {
 			System.out.println(ten);
 		}
 	}
+
+	//16. Với mỗi loại máy bay có phi công lái cho biết mã số, loại máy báy và tổng số phi công có thể lái loại máy bay đó.
+	@Test
+	void testCau16() {
+		List<Object[]> objs = mayBayService.getMayBayAndCountNV();
+		for (Object[] obj: objs) {
+			System.out.println("- Mã số: " + obj[0] + ", Loại: " + obj[1] + ", Tổng số phi công có thể lái: " + obj[2]);
+		}
+	}
 }

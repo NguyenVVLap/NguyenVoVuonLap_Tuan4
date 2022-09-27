@@ -9,6 +9,7 @@ public interface MayBayService {
     public int countMayBayByLoaiBoeing();
     public List<String> findMaMBDriveByNhanVienFirstNameNguyen();
     public List<String> getLoaiByMaCBVN280();
+    public List<Object[]> getMayBayAndCountNV();
 
 
 }

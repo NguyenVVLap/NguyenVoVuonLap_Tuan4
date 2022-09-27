@@ -32,4 +32,9 @@ public class MayBayServiceImpl implements  MayBayService{
     public List<String> getLoaiByMaCBVN280() {
         return mayBayRepository.getLoaiByMaCBVN280();
     }
+
+    @Override
+    public List<Object[]> getMayBayAndCountNV() {
+        return mayBayRepository.getMayBayAndCountNV();
+    }
 }

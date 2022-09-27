@@ -22,4 +22,11 @@ public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
 
     @Query(value = "select Loai from maybay where TamBay < (select DoDai from chuyenbay where MaCB = 'VN280')",nativeQuery = true)
     public List<String> getLoaiByMaCBVN280();
+
+    @Query(value = "SELECT maybay.MaMB, maybay.Loai, count( nhanvien.MaNV) "
+            + "FROM chungnhan INNER JOIN "
+            + "maybay ON chungnhan.MaMB = maybay.MaMB INNER JOIN "
+            + "nhanvien ON chungnhan.MaNV = nhanvien.MaNV "
+            + "GROUP BY maybay.MaMB, maybay.Loai",nativeQuery = true)
+    public List<Object[]> getMayBayAndCountNV();
 }
