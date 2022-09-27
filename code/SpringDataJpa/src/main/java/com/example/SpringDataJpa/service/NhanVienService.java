@@ -13,5 +13,6 @@ public interface NhanVienService {
     public List<String> getTenNVByLoaiMBBoeing();
     public List<String> getMaNVDrive3LoaiMB();
     public List<Object[]> getMaNVAndMaxTamBayOfNVDrive3LoaiMB();
+    public List<Object[]> getMaNVAndCountLoaiMB();
 
 }

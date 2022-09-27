@@ -240,4 +240,13 @@ class SpringDataJpaApplicationTests {
 			System.out.println("Mã NV: " + obj[0] + ", Tầm bay lớn nhất: " + obj[1]);
 		}
 	}
+
+	//24. Với mỗi phi công cho biết mã số phi công và tổng số loại máy bay mà phi công đó có thể lái.
+	@Test
+	void testCau24() {
+		List<Object[]> objs = nhanVienService.getMaNVAndCountLoaiMB();
+		for (Object[] obj: objs) {
+			System.out.println("- Mã NV: " + obj[0] + ", Tổng loại máy bay có thể lái: " + obj[1]);
+		}
+	}
 }

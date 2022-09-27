@@ -49,4 +49,8 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
             + "GROUP BY(chungnhan.MaNV)\r\n"
             + "HAVING COUNT(chungnhan.MaMB) > 3 ",nativeQuery = true)
     public List<Object[]> getMaNVAndMaxTamBayOfNVDrive3LoaiMB();
+
+    @Query(value = "SELECT MaNV, count(MaMB) FROM chungnhan "
+            + "GROUP BY (MaNV) ",nativeQuery = true)
+    public List<Object[]> getMaNVAndCountLoaiMB();
 }
