@@ -51,4 +51,9 @@ public class ChuyenBayServiceImpl implements ChuyenBayService{
     public List<Object[]> countChuyenBayByGaDi() {
         return chuyenBayRepository.countChuyenBayByGaDi();
     }
+
+    @Override
+    public List<Object[]> sumChiPhiByGadi() {
+        return chuyenBayRepository.sumChiPhiByGadi();
+    }
 }

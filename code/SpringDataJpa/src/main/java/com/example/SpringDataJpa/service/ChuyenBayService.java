@@ -15,5 +15,6 @@ public interface ChuyenBayService {
 
     public List<ChuyenBay> getChuyenBayForAToBToA();
     public List<Object[]> countChuyenBayByGaDi();
+    public List<Object[]> sumChiPhiByGadi();
 
 }

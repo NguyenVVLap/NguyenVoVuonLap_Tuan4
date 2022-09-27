@@ -192,4 +192,13 @@ class SpringDataJpaApplicationTests {
 			System.out.println("- Ga đi: " + obj[0] + ", Số chuyến bay: " + obj[1]);
 		}
 	}
+
+	//19. Với mỗi ga có chuyến  bay xuất phát từ đó cho biết tổng chi phí phải trả cho phi công lái các chuyến bay khởi hành từ ga đó.
+	@Test
+	void testCau19() {
+		List<Object[]> objs = chuyenBayService.sumChiPhiByGadi();
+		for (Object[] obj: objs) {
+			System.out.println("- Ga đi: " + obj[0] + ", Tổng chi phí: " + obj[1]);
+		}
+	}
 }

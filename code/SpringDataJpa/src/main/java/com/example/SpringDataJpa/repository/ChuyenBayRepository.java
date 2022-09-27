@@ -26,4 +26,7 @@ public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
 
     @Query(value = "select GaDi, count(GaDi) from chuyenbay group by GaDi", nativeQuery = true)
     public List<Object[]> countChuyenBayByGaDi();
+
+    @Query(value = "SELECT chuyenbay.GaDi, SUM(chuyenbay.ChiPhi) as total FROM chuyenbay GROUP BY (chuyenbay.GaDi)",nativeQuery = true)
+    public List<Object[]> sumChiPhiByGadi();
 }
