@@ -11,6 +11,7 @@ public interface ChuyenBayService {
     public List<ChuyenBay> findByDoDaiUnder10000Above8000();
     public List<ChuyenBay> findBySaiGonToBuonMeThuoc();
     public int countChuyenBayFromSaiGon();
+    public List<ChuyenBay> getChuyenBayByLoaiMayBayAirbusA320();
 
 
 }

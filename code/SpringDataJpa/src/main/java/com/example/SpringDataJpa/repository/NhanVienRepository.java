@@ -33,4 +33,12 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
             "WHERE maybay.loai like '%Boeing%' or maybay.loai like '%Airbus%'" +
             "GROUP by nhanvien.manv;", nativeQuery = true)
     public List<String> findNhanVienDriveMayBayBoeingAndAirbus();
+
+    @Query(value = "SELECT nhanvien.Ten "
+            + "FROM maybay INNER JOIN "
+            + "chungnhan ON maybay.MaMB = chungnhan.MaMB INNER JOIN "
+            + "nhanvien ON chungnhan.MaNV = nhanvien.MaNV "
+            + "where maybay.Loai like '%Boeing%' "
+            + "GROUP BY nhanvien.Ten",nativeQuery = true)
+    public List<String> getTenNVByLoaiMBBoeing();
 }

@@ -36,4 +36,9 @@ public class ChuyenBayServiceImpl implements ChuyenBayService{
     public int countChuyenBayFromSaiGon() {
         return chuyenBayRepository.countChuyenBayFromSaiGon();
     }
+
+    @Override
+    public List<ChuyenBay> getChuyenBayByLoaiMayBayAirbusA320() {
+        return chuyenBayRepository.getChuyenBayByLoaiMayBayAirbusA320();
+    }
 }

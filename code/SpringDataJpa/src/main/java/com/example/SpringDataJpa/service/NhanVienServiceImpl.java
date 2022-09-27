@@ -37,4 +37,9 @@ public class NhanVienServiceImpl implements  NhanVienService{
     public List<String> findNhanVienDriveMayBayBoeingAndAirbus() {
         return nhanVienRepository.findNhanVienDriveMayBayBoeingAndAirbus();
     }
+
+    @Override
+    public List<String> getTenNVByLoaiMBBoeing() {
+        return nhanVienRepository.getTenNVByLoaiMBBoeing();
+    }
 }

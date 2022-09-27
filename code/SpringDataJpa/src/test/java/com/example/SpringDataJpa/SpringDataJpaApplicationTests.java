@@ -144,4 +144,24 @@ class SpringDataJpaApplicationTests {
 			System.out.println(loai);
 		}
 	}
+
+	//14. Cho biết các chuyến bay có thể ñược thực hiện bởi máy bay Airbus A320.
+	@Test
+	void testCau14() {
+		List<ChuyenBay> listCB = chuyenBayService.getChuyenBayByLoaiMayBayAirbusA320();
+		System.out.println("- Các chuyến bay có thể ñược thực hiện bởi máy bay Airbus A320: ");
+		for (ChuyenBay cb: listCB) {
+			System.out.println(cb);
+		}
+	}
+
+	//15. Cho biết tên của các phi công lái máy bay Boeing.
+	@Test
+	void testCau15() {
+		List<String> listTen = nhanVienService.getTenNVByLoaiMBBoeing();
+		System.out.println("- Tên của các phi công lái máy bay Boeing: ");
+		for (String ten: listTen) {
+			System.out.println(ten);
+		}
+	}
 }
