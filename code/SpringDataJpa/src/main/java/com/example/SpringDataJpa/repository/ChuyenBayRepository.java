@@ -32,4 +32,7 @@ public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
 
     @Query(value = "select * from chuyenbay where GioDi <'12:00:00'",nativeQuery = true)
     public List<ChuyenBay> getCBBefore12h();
+
+    @Query(value = "select GaDi,COUNT(GaDi) from chuyenbay where GioDi <'12:00:00' group by GaDi",nativeQuery = true)
+    public List<Object[]> countCBByGadiBefore12h();
 }

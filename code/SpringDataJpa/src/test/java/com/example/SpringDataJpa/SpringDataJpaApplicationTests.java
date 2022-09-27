@@ -211,4 +211,13 @@ class SpringDataJpaApplicationTests {
 			System.out.println(cb);
 		}
 	}
+
+	//21. Với mỗi địa điểm xuất phát cho biết có bao nhiêu chuyến bay có thể khởi hành trước 12:00.
+	@Test
+	void testCau21() {
+		List<Object[]> objs = chuyenBayService.countCBByGadiBefore12h();
+		for (Object[] obj: objs) {
+			System.out.println("- Ga đi: " + obj[0] + ", Số chuyến bay trước 12h: " + obj[1]);
+		}
+	}
 }

@@ -58,6 +58,11 @@ public class ChuyenBayServiceImpl implements ChuyenBayService{
     }
 
     @Override
+    public List<Object[]> countCBByGadiBefore12h() {
+        return chuyenBayRepository.countCBByGadiBefore12h();
+    }
+
+    @Override
     public List<ChuyenBay> getCBBefore12h() {
         return chuyenBayRepository.getCBBefore12h();
     }

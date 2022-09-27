@@ -17,5 +17,5 @@ public interface ChuyenBayService {
     public List<Object[]> countChuyenBayByGaDi();
     public List<Object[]> sumChiPhiByGadi();
     public List<ChuyenBay> getCBBefore12h();
-
+    public List<Object[]> countCBByGadiBefore12h();
 }
