@@ -42,4 +42,9 @@ public class NhanVienServiceImpl implements  NhanVienService{
     public List<String> getTenNVByLoaiMBBoeing() {
         return nhanVienRepository.getTenNVByLoaiMBBoeing();
     }
+
+    @Override
+    public List<String> getMaNVDrive3LoaiMB() {
+        return nhanVienRepository.getMaNVDrive3LoaiMB();
+    }
 }

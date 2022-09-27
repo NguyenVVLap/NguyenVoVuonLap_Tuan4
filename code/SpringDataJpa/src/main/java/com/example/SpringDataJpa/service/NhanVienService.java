@@ -11,5 +11,5 @@ public interface NhanVienService {
     public List<NhanVien> findNhanVienDriveMayBayId747();
     public List<String> findNhanVienDriveMayBayBoeingAndAirbus();
     public List<String> getTenNVByLoaiMBBoeing();
-
+    public List<String> getMaNVDrive3LoaiMB();
 }

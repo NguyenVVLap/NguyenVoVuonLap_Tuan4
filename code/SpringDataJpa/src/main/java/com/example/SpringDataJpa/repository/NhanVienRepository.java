@@ -41,4 +41,7 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
             + "where maybay.Loai like '%Boeing%' "
             + "GROUP BY nhanvien.Ten",nativeQuery = true)
     public List<String> getTenNVByLoaiMBBoeing();
+
+    @Query(value = "SELECT chungnhan.MaNV FROM chungnhan GROUP BY(chungnhan.MaNV) HAVING COUNT(chungnhan.MaMB) = 3",nativeQuery = true)
+    public List<String> getMaNVDrive3LoaiMB();
 }

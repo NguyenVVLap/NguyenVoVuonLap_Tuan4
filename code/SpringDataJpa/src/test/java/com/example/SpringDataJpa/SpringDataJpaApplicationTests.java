@@ -220,4 +220,14 @@ class SpringDataJpaApplicationTests {
 			System.out.println("- Ga đi: " + obj[0] + ", Số chuyến bay trước 12h: " + obj[1]);
 		}
 	}
+
+	//22. Cho biết mã số của các phi công chỉ lái được 3 loại máy bay.
+	@Test
+	void testCau22() {
+		List<String> listMaNV = nhanVienService.getMaNVDrive3LoaiMB();
+		System.out.println("- Mã số của các phi công chỉ lái được 3 loại máy bay: ");
+		for (String maNV: listMaNV) {
+			System.out.println(maNV);
+		}
+	}
 }
