@@ -126,12 +126,12 @@ class SpringDataJpaApplicationTests {
 	}
 
 	//12. Cho biết mã số của các phi công vừa lái được Boeing vừa lái được Airbus.
-//	@Test
-//	void testCau12() {
-//		List<String> listMaNV = nhanVienService.findNhanVienDriveMayBayBoeingAndAirbus();
-//		System.out.println("- Mã số của các phi công vừa lái được Boeing vừa lái được Airbus: ");
-//		for (String ma: listMaNV) {
-//			System.out.println(ma);
-//		}
-//	}
+	@Test
+	void testCau12() {
+		List<String> listMaNV = nhanVienService.findNhanVienDriveMayBayBoeingAndAirbus();
+		System.out.println("- Mã số của các phi công vừa lái được Boeing vừa lái được Airbus: ");
+		for (String ma: listMaNV) {
+			System.out.println(ma);
+		}
+	}
 }
