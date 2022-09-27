@@ -53,4 +53,9 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
     @Query(value = "SELECT MaNV, count(MaMB) FROM chungnhan "
             + "GROUP BY (MaNV) ",nativeQuery = true)
     public List<Object[]> getMaNVAndCountLoaiMB();
+
+    @Query(value = "select nhanvien.MaNV, Ten, Luong from nhanvien full outer join " +
+            "chungnhan on nhanvien.MaNV=chungnhan.MaNV " +
+            "where chungnhan.MaNV is null",nativeQuery = true)
+    public List<Object[]> getNVNotPhiCong();
 }

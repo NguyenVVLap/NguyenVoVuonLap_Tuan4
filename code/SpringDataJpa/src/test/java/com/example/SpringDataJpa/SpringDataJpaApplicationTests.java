@@ -249,4 +249,14 @@ class SpringDataJpaApplicationTests {
 			System.out.println("- Mã NV: " + obj[0] + ", Tổng loại máy bay có thể lái: " + obj[1]);
 		}
 	}
+
+	//25. Tìm các nhân viên không phải là phi công.
+	@Test
+	void testCau25() {
+		List<Object[]> objs = nhanVienService.getNVNotPhiCong();
+		System.out.println("- Các nhân viên không phải là phi công: ");
+		for (Object[] obj: objs) {
+			System.out.println("Mã NV: " + obj[0] + ", Tên NV: " + obj[1] + ", Lương: " + obj[2]);
+		}
+	}
 }

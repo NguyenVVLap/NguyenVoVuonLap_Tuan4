@@ -57,4 +57,9 @@ public class NhanVienServiceImpl implements  NhanVienService{
     public List<Object[]> getMaNVAndCountLoaiMB() {
         return nhanVienRepository.getMaNVAndCountLoaiMB();
     }
+
+    @Override
+    public List<Object[]> getNVNotPhiCong() {
+        return nhanVienRepository.getNVNotPhiCong();
+    }
 }
