@@ -47,4 +47,9 @@ public class NhanVienServiceImpl implements  NhanVienService{
     public List<String> getMaNVDrive3LoaiMB() {
         return nhanVienRepository.getMaNVDrive3LoaiMB();
     }
+
+    @Override
+    public List<Object[]> getMaNVAndMaxTamBayOfNVDrive3LoaiMB() {
+        return nhanVienRepository.getMaNVAndMaxTamBayOfNVDrive3LoaiMB();
+    }
 }

@@ -230,4 +230,14 @@ class SpringDataJpaApplicationTests {
 			System.out.println(maNV);
 		}
 	}
+
+	//23. Với mỗi phi công có thể lái nhiều hơn 3 loại máy bay, cho biết mã số phi công và tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái.
+	@Test
+	void testCau23() {
+		List<Object[]> objs = nhanVienService.getMaNVAndMaxTamBayOfNVDrive3LoaiMB();
+		System.out.println("- Phi công có thể lái nhiều hơn 3 loại máy bay: ");
+		for (Object[] obj: objs) {
+			System.out.println("Mã NV: " + obj[0] + ", Tầm bay lớn nhất: " + obj[1]);
+		}
+	}
 }
